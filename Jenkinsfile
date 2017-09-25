@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('install docker') {
       steps {
-        sh 'echo "test"'
+        sh 'docker build .'
       }
     }
   }
