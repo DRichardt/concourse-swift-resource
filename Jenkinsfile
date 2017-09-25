@@ -8,8 +8,7 @@ pipeline {
   stages {
     stage('install docker') {
       steps {
-        sh '''systemctl restart docker
-docker version'''
+        sh 'docker version'
       }
     }
   }
