@@ -1,9 +1,14 @@
 pipeline {
-  agent any
+  agent {
+    dockerfile {
+      filename 'Dockerfile'
+    }
+    
+  }
   stages {
     stage('install docker') {
       steps {
-        sh 'docker build .'
+        sh 'echo "test"'
       }
     }
   }
