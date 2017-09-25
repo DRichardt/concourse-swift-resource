@@ -6,9 +6,15 @@ pipeline {
     
   }
   stages {
-    stage('teststage') {
+    stage('install docker') {
       steps {
-        sh 'echo "test"'
+        sh '''apt-get update
+apt install docker.io'''
+      }
+    }
+    stage('build concourse-swift') {
+      steps {
+        sh 'docker build .'
       }
     }
   }
