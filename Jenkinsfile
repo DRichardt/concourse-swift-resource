@@ -27,5 +27,11 @@ go version
 make build'''
       }
     }
+    stage('create image') {
+      steps {
+        sh '''cd /tmp/Go/src/github.com/sapcc/concourse-swift-resource/
+make image'''
+      }
+    }
   }
 }
