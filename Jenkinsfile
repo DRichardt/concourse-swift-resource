@@ -1,11 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      label 'Docker'
-      image 'richardt/jenkinscontainer'
-    }
-    
-  }
+  agent any
   stages {
     stage('Teststage') {
       steps {
