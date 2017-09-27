@@ -10,7 +10,9 @@ pipeline {
       steps {
         echo 'Building concourse swift resource'
         echo 'install go'
-        sh 'sudo apt-get -y install golang-go make'
+        sh '''curl -O https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
+tar -xvf go1.8.linux-amd64.tar.gz
+sudo mv go /usr/local'''
         echo 'make build'
         sh '''export GOPATH=/tmp/Go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
