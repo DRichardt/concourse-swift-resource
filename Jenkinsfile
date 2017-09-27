@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'evarga/jenkins-slave'
       label 'Docker'
+      image 'richardt/jenkinscontainer'
     }
     
   }
