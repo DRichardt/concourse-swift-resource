@@ -12,7 +12,9 @@ pipeline {
         echo 'install go'
         sh 'sudo apt-get -y install golang-go make'
         echo 'make build'
-        sh 'make build'
+        sh '''export GOPATH=$(pwd)
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+make build'''
       }
     }
   }
