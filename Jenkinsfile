@@ -2,11 +2,12 @@ pipeline {
   agent {
     docker {
       image 'evarga/jenkins-slave'
+      label 'Docker'
     }
     
   }
   stages {
-    stage('install docker') {
+    stage('Teststage') {
       steps {
         sh 'echo "test"'
       }
