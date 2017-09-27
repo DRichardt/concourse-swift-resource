@@ -15,9 +15,10 @@ pipeline {
         sh '''export GOPATH=/root/Go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 sudo mkdir -p /root/Go/src/github.com/sapcc/concourse-swift-resource
-sudo mv * /root/Go/src/github.com/sapcc/concourse-swift-resource/
-sudo cd /root/Go/src/github.com/sapcc/concourse-swift-resource/
-sudo make build'''
+sudo chmod -R 777 /root/Go
+mv * /root/Go/src/github.com/sapcc/concourse-swift-resource/
+cd /root/Go/src/github.com/sapcc/concourse-swift-resource/
+make build'''
       }
     }
   }
