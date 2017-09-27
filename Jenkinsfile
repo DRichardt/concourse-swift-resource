@@ -11,7 +11,8 @@ pipeline {
         echo 'Building concourse swift resource'
         echo 'install go'
         sh 'sudo apt-get -y install golang-go'
-        echo 'Make build'
+        echo 'make build'
+        sh 'make build'
       }
     }
   }
