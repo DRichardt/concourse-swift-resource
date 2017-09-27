@@ -17,8 +17,8 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 mkdir -p /tmp/Go/src/github.com/sapcc/concourse-swift-resource
 mv * /tmp/Go/src/github.com/sapcc/concourse-swift-resource/
 cd /tmp/Go/src/github.com/sapcc/concourse-swift-resource/
-go get -u github.com/tools/godep
-godep restore
+go get -u github.com/kardianos/govendor
+govendor fetch
 make build'''
       }
     }
