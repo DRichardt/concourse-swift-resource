@@ -12,13 +12,12 @@ pipeline {
         echo 'install go'
         sh 'sudo apt-get -y install golang-go make'
         echo 'make build'
-        sh '''export GOPATH=/root/Go
+        sh '''export GOPATH=/tmp/Go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-sudo mkdir -p /root/Go/src/github.com/sapcc/concourse-swift-resource
-sudo chown -R jenkins /root/Go
-sudo mv * /root/Go/src/github.com/sapcc/concourse-swift-resource/
-cd /root/Go/src/github.com/sapcc/concourse-swift-resource/
-sudo make build'''
+mkdir -p /tmp/Go/src/github.com/sapcc/concourse-swift-resource
+mv * /tmp/Go/src/github.com/sapcc/concourse-swift-resource/
+cd /tmp/Go/src/github.com/sapcc/concourse-swift-resource/
+make build'''
       }
     }
   }
