@@ -22,7 +22,8 @@ mv * /tmp/Go/src/github.com/sapcc/concourse-swift-resource/
 cd /tmp/Go/src/github.com/sapcc/concourse-swift-resource/
 go get -u github.com/FiloSottile/gvt
 gvt restore
-go version'''
+go version
+make build'''
       }
     }
   }
