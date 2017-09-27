@@ -14,7 +14,8 @@ pipeline {
 tar -xvf go1.8.linux-amd64.tar.gz
 sudo mv go /usr/local'''
         echo 'make build'
-        sh '''export GOPATH=/tmp/Go
+        sh '''export GOROOT=/usr/local/go
+export GOPATH=/tmp/Go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 mkdir -p /tmp/Go/src/github.com/sapcc/concourse-swift-resource
 mv * /tmp/Go/src/github.com/sapcc/concourse-swift-resource/
