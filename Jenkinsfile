@@ -14,7 +14,7 @@ pipeline {
         echo 'make build'
         sh '''export GOPATH=/root/Go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-mkdir -p /root/Go/src/github.com/sapcc/concourse-swift-resource
+sudo mkdir -p /root/Go/src/github.com/sapcc/concourse-swift-resource
 sudo mv * /root/Go/src/github.com/sapcc/concourse-swift-resource/
 sudo cd /root/Go/src/github.com/sapcc/concourse-swift-resource/
 sudo make build'''
