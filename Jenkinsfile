@@ -10,7 +10,7 @@ pipeline {
       steps {
         echo 'Building concourse swift resource'
         echo 'install go'
-        sh 'apt-get install golang-go'
+        sh 'sudo apt-get install golang-go'
         echo 'Make build'
       }
     }
