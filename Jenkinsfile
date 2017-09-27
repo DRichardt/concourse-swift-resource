@@ -9,8 +9,9 @@ pipeline {
     stage('build resource') {
       steps {
         echo 'Building concourse swift resource'
+        echo 'install go'
         sh 'apt-get install golang-go'
-        sh 'make build'
+        echo 'Make build'
       }
     }
   }
