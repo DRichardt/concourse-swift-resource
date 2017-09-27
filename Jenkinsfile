@@ -6,9 +6,11 @@ pipeline {
     
   }
   stages {
-    stage('Teststage') {
+    stage('build resource') {
       steps {
-        sh 'ls -alh'
+        echo 'Building concourse swift resource'
+        sh 'apt-get install golang-go'
+        sh 'make build'
       }
     }
   }
