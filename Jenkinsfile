@@ -14,6 +14,8 @@ pipeline {
         echo 'make build'
         sh '''export GOPATH=$(pwd)
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+mkdir -p $(pwd)/src/github.com/sapcc/concourse-swift-resource
+mv * $(pwd)/src/github.com/sapcc/concourse-swift-resource/
 make build'''
       }
     }
