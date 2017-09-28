@@ -34,7 +34,11 @@ make build'''
     }
     stage('build image') {
       steps {
-        sh 'make image'
+        sh '''
+
+
+ls -alhR'''
+        sh 'docker build -t richardt/con-resource .'
       }
     }
   }
