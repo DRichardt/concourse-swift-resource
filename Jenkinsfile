@@ -39,7 +39,7 @@ make build'''
 
 ls -alhR'''
         sh '''
-cd /tmp/Go/src/github.com/sapcc/concourse-swift-resource && docker build -t richardt/con-resource .'''
+cd /tmp/Go/src/github.com/sapcc/concourse-swift-resource && docker -H tcp://192.168.178.30:4243 build -t richardt/con-resource .'''
       }
     }
   }
