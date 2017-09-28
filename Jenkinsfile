@@ -38,7 +38,8 @@ make build'''
 
 
 ls -alhR'''
-        sh 'docker build -t richardt/con-resource .'
+        sh '''
+cd /tmp/Go/src/github.com/sapcc/concourse-swift-resource && docker build -t richardt/con-resource .'''
       }
     }
   }
