@@ -27,9 +27,14 @@ go version
 make build'''
       }
     }
-    stage('create image') {
+    stage('install docker') {
       steps {
-        sh 'docker version'
+        sh 'sudo curl -sSL https://get.docker.com/ | sh'
+      }
+    }
+    stage('build image') {
+      steps {
+        sh 'make image'
       }
     }
   }
