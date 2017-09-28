@@ -29,9 +29,7 @@ make build'''
     }
     stage('create image') {
       steps {
-        sh '''sudo apt-get install docker
-cd /tmp/Go/src/github.com/sapcc/concourse-swift-resource/
-make image'''
+        sh 'docker version'
       }
     }
   }
